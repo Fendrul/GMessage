@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/simon/CLionProjects/Gmessage/Console.cpp
+
+C:/Users/simon/CLionProjects/Gmessage/Console.h
+Console.cpp
+C:/Users/simon/CLionProjects/Gmessage/Console.cpp
+
+C:/Users/simon/CLionProjects/Gmessage/GMessage.cpp
+cstdio
+-
+Message.h
+C:/Users/simon/CLionProjects/Gmessage/Message.h
+
+C:/Users/simon/CLionProjects/Gmessage/GMessage.h
+GMessage.cpp
+C:/Users/simon/CLionProjects/Gmessage/GMessage.cpp
+stdio.h
+-
+stdlib.h
+-
+
+C:/Users/simon/CLionProjects/Gmessage/Message.cpp
+
+C:/Users/simon/CLionProjects/Gmessage/Message.h
+cstdio
+-
+Message.cpp
+C:/Users/simon/CLionProjects/Gmessage/Message.cpp
+
+C:/Users/simon/CLionProjects/Gmessage/main.cpp
+iostream
+-
+cstdio
+-
+GMessage.h
+C:/Users/simon/CLionProjects/Gmessage/GMessage.h
+Console.h
+C:/Users/simon/CLionProjects/Gmessage/Console.h
+
