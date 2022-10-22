@@ -1,18 +1,20 @@
-#include <iostream>
-#include <cstdio>
 #include "GMessage.h"
+
+#ifndef console
+#define console
 #include "Console.h"
+#endif
 
 
 
 int main() {
-    char textInput[20];
+    char textInput[500];
     int intInput = 0;
     int returnCode = 0;
 
     Console Console;
-    Message Message;
-    GMessage GMessage;
+    Message* message;
+    GMessage gestMessage;
 
     Console.Affichage("Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non");
     Console.Entree(&intInput);
@@ -23,11 +25,14 @@ int main() {
     }
 
     while (intInput) {
-        Console.Affichage("Entrez le message à enregistrer");
+        Console.Affichage("Entrez le message a enregistrer");
         Console.Entree(textInput);
 
-        Message.CreationMessage(textInput, &returnCode);
-        GMessage.AjoutMessage(Message, &returnCode);
+        message = new Message;
+        message->CreationMessage(textInput, &returnCode);
+        gestMessage.AjoutMessage(message, &returnCode);
+
+        gestMessage.AffichageMessages();
 
         Console.Affichage(" Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non");
         Console.Entree(&intInput);
@@ -38,7 +43,7 @@ int main() {
         }
     }
 
-    GMessage.AffichageMessages();
+
 
     return 0;
 }

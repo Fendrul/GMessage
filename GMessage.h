@@ -13,23 +13,18 @@
 
 #include "Message.h"
 
-#define nombreMots 5
+#define nombreMessages 10
 
 class GMessage {
 
-    Message Message[nombreMots];
+    Message* messageStocke;
     int tailleGestionnaire;
 
 public:
     GMessage();
-
-    void AjoutMessage (class Message messageAInserer, int* returnCode);
-
-    void AffichageMessages() {
-        for (int i = 0; i < tailleGestionnaire; ++i) {
-            Message[i].Display();
-        }
-    }
+    void AjoutMessage (Message *messageAInserer, int* returnCode);
+    void AffichageMessages();
 };
 
 #endif //GMESSAGE_GMESSAGE_H
+

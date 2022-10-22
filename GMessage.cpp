@@ -5,17 +5,24 @@
 
 #endif
 
-
-#define OK 0
-#define FULL 1
-#define MESSAGETROPLONG 2
-
-
 GMessage::GMessage() {
     tailleGestionnaire = 0;
+    messageStocke = (Message*)malloc(sizeof(Message) * 3);
 }
 
-void GMessage::AjoutMessage(struct Message messageAInserer, int *returncode) {
-    Message[tailleGestionnaire] = messageAInserer;
+void GMessage::AjoutMessage(Message *messageAInserer, int *returncode) {
+
+    //Réallocation de mémoire si gestionnaire plein
+    if ((tailleGestionnaire + 1) % nombreMessages == 0) {
+        messageStocke = (Message*)realloc(messageStocke, (tailleGestionnaire+1+nombreMessages) * sizeof(Message));
+    }
+
+    messageStocke[tailleGestionnaire] = *messageAInserer;
     tailleGestionnaire++;
+}
+
+void GMessage::AffichageMessages() {
+    for (int i = 0; i < tailleGestionnaire; ++i) {
+        messageStocke[i].Display();
+    }
 }

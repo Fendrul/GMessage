@@ -6,6 +6,11 @@
 #include <cstdio>
 #endif
 
+#ifndef stdlib
+#define stdlib
+#include <stdlib.h>
+#endif
+
 #ifndef console
 #define console
 #include "Console.h"
@@ -14,7 +19,7 @@
 #define tailleMot 20
 
 class Message {
-    char message[tailleMot];
+    char* message;
     char typeMessage[10];
     Console Console;
 
@@ -23,7 +28,7 @@ public:
     void Display();
 
 private:
-    int NombreCaracteres(char *chaineCaracteres);
+    int ComptageCaracteres(char *chaineCaracteres);
 };
 
 

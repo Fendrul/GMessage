@@ -10,12 +10,6 @@ C:/Users/simon/CLionProjects/Gmessage/Console.h
 cstdio
 -
 
-C:/Users/simon/CLionProjects/Gmessage/GMessage.cpp
-cstdio
--
-GMessage.h
-C:/Users/simon/CLionProjects/Gmessage/GMessage.h
-
 C:/Users/simon/CLionProjects/Gmessage/GMessage.h
 stdio.h
 -
@@ -24,21 +18,15 @@ stdlib.h
 Message.h
 C:/Users/simon/CLionProjects/Gmessage/Message.h
 
-C:/Users/simon/CLionProjects/Gmessage/Message.cpp
-Message.h
-C:/Users/simon/CLionProjects/Gmessage/Message.h
-
 C:/Users/simon/CLionProjects/Gmessage/Message.h
 cstdio
+-
+stdlib.h
 -
 Console.h
 C:/Users/simon/CLionProjects/Gmessage/Console.h
 
 C:/Users/simon/CLionProjects/Gmessage/main.cpp
-iostream
--
-cstdio
--
 GMessage.h
 C:/Users/simon/CLionProjects/Gmessage/GMessage.h
 Console.h

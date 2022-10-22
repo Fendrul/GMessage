@@ -1,13 +1,15 @@
 #include "Message.h"
 
 void Message::CreationMessage(char *messageSaisi, int *returnCode) {
-    int nombreCaracteres = NombreCaracteres(messageSaisi);
+    int nombreCaracteres = ComptageCaracteres(messageSaisi);
+    message = (char*)malloc(sizeof(char) * (nombreCaracteres + 1));
+
     for (int i = 0; i < nombreCaracteres + 1; ++i) {
         message[i] = messageSaisi[i];
     }
 }
 
-int Message::NombreCaracteres(char *chaineCaracteres) {
+int Message::ComptageCaracteres(char *chaineCaracteres) {
     int totChar = 0;
 
     while (chaineCaracteres[totChar] != '\0') {
