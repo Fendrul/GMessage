@@ -11,5 +11,6 @@ int Console::Entree(int *nombre) {
 }
 
 void Console::Entree(char *texte) {
-    scanf("%s", texte);
+    scanf("%c");
+    scanf("%[^\n]", texte);
 }

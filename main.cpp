@@ -8,7 +8,7 @@
 
 
 int main() {
-    char textInput[500];
+    char textInput[100];
     int intInput = 0;
     int returnCode = 0;
 

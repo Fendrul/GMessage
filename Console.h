@@ -6,6 +6,11 @@
 #include <cstdio>
 #endif
 
+#ifndef stdlib
+#define stdlib
+#include <stdlib.h>
+#endif
+
 
 class Console {
 

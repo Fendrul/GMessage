@@ -6,8 +6,14 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/simon/CLionProjects/Gmessage/Console.cpp
+Console.h
+C:/Users/simon/CLionProjects/Gmessage/Console.h
+
 C:/Users/simon/CLionProjects/Gmessage/Console.h
 cstdio
+-
+stdlib.h
 -
 
 C:/Users/simon/CLionProjects/Gmessage/GMessage.h
