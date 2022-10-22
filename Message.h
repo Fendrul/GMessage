@@ -1,31 +1,31 @@
-//
-// Created by Simon on 21/10/2022.
-//
-
 #ifndef GMESSAGE_MESSAGE_H
 #define GMESSAGE_MESSAGE_H
 
+#ifndef cstdio
+#define cstdio
 #include <cstdio>
-#include "Message.cpp"
+#endif
 
-void Message::AjoutMessage(char *messageSaisi, int *returnCode) {
-    int nombreCaracteres = NombreCaracteres(messageSaisi);
-        for (int i = 0; i < nombreCaracteres; ++i) {
-            message[i] = messageSaisi[i];
-        }
+#ifndef console
+#define console
+#include "Console.h"
+#endif
 
-        printf("%s\n", message);
-}
+#define tailleMot 20
 
-int Message::NombreCaracteres(char *chaineCaracteres) {
-    int totChar = 0;
+class Message {
+    char message[tailleMot];
+    char typeMessage[10];
+    Console Console;
 
-    while (chaineCaracteres[totChar] != '\0') {
-        totChar++;
-    }
+public:
+    void CreationMessage(char *messageSaisi, int *returnCode);
+    void Display();
 
-    return totChar;
-}
+private:
+    int NombreCaracteres(char *chaineCaracteres);
+};
+
 
 
 #endif //GMESSAGE_MESSAGE_H

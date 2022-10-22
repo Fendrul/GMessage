@@ -1,4 +1,5 @@
-#include "GMessage.cpp"
+#ifndef GMESSAGE_GMESSAGE_H
+#define GMESSAGE_GMESSAGE_H
 
 #ifndef stdio
 #define stdio
@@ -10,27 +11,25 @@
 #include <stdlib.h>
 #endif
 
-GMessage::GMessage() {
-    index = 0;
-    iLectureIterative = 0;
-    tailleGestionnaire = 0;
-    RC = OK;
-}
+#include "Message.h"
 
+#define nombreMots 5
 
+class GMessage {
 
-void GMessage::Display() {
-    for (int i = 0; i < index; ++i) {
-        printf("%s\n", message[i]);
+    Message Message[nombreMots];
+    int tailleGestionnaire;
+
+public:
+    GMessage();
+
+    void AjoutMessage (class Message messageAInserer, int* returnCode);
+
+    void AffichageMessages() {
+        for (int i = 0; i < tailleGestionnaire; ++i) {
+            Message[i].Display();
+        }
     }
-}
+};
 
-void GMessage::NouveauMessage(char *messageSaisi, int* returnCode) {
-    if (tailleGestionnaire >= nombreMots) {
-        printf("Il y a trop de message dans el gestionnaire.\n");
-        *returnCode = MESSAGETROPLONG;
-    } else {
-        message[tailleGestionnaire].AjoutMessage(messageSaisi, returnCode);
-        tailleGestionnaire++;
-    }
-}
+#endif //GMESSAGE_GMESSAGE_H

@@ -1,12 +1,20 @@
-#include "Console.cpp"
-
 #ifndef GMESSAGE_CONSOLE_H
 #define GMESSAGE_CONSOLE_H
 
-void Console::Affichage() {
-    printf("Entrez le message à saisir.\n");
-}
+#ifndef cstdio
+#define cstdio
+#include <cstdio>
+#endif
 
 
+class Console {
+
+public:
+    void Affichage(char* texte);
+
+    int Entree(int *nombre);
+
+    void Entree(char *texte);
+};
 
 #endif //GMESSAGE_CONSOLE_H

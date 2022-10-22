@@ -1,16 +1,22 @@
-//
-// Created by Simon on 21/10/2022.
-//
+#include "Message.h"
 
-#define tailleMot 15
+void Message::CreationMessage(char *messageSaisi, int *returnCode) {
+    int nombreCaracteres = NombreCaracteres(messageSaisi);
+    for (int i = 0; i < nombreCaracteres + 1; ++i) {
+        message[i] = messageSaisi[i];
+    }
+}
 
-class Message {
-    char message[tailleMot];
-    char typeMessage[10];
+int Message::NombreCaracteres(char *chaineCaracteres) {
+    int totChar = 0;
 
-private:
-    int NombreCaracteres(char *chaineCaracteres);
+    while (chaineCaracteres[totChar] != '\0') {
+        totChar++;
+    }
 
-public:
-    void AjoutMessage(char *messageSaisi, int *returnCode);
-};
+    return totChar;
+}
+
+void Message::Display() {
+    Console.Affichage(message);
+}

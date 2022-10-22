@@ -6,37 +6,39 @@
 
 
 int main() {
-    char textInput [15];
-    int entreeMessage = 0;
+    char textInput[20];
+    int intInput = 0;
     int returnCode = 0;
 
-    Console console;
+    Console Console;
+    Message Message;
     GMessage GMessage;
 
-    printf(" Voulez-vous introduire un message ? \n1: Oui \n0: Non\n");
-    scanf("%d", &entreeMessage);
+    Console.Affichage("Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non");
+    Console.Entree(&intInput);
 
-    while (entreeMessage != 0 && entreeMessage != 1) {
-        printf("Saisie incorrecte, veuillez recommencer.\n");
-        scanf("%d", &entreeMessage);
+    while (intInput != 0 && intInput != 1) {
+        Console.Affichage("Saisie incorrecte, veuillez recommencer");
+        Console.Entree(&intInput);
     }
 
-    while (entreeMessage) {
-        console.Affichage();
-        scanf("%s", textInput);
+    while (intInput) {
+        Console.Affichage("Entrez le message à enregistrer");
+        Console.Entree(textInput);
 
-        GMessage.NouveauMessage(textInput, &returnCode);
+        Message.CreationMessage(textInput, &returnCode);
+        GMessage.AjoutMessage(Message, &returnCode);
 
-        printf(" Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non\n");
-        scanf("%d", &entreeMessage);
+        Console.Affichage(" Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non");
+        Console.Entree(&intInput);
 
-        while (entreeMessage != 0 && entreeMessage != 1) {
-            printf("Saisie incorrecte, veuillez recommencer.\n");
-            scanf("%d", &entreeMessage);
+        while (intInput != 0 && intInput != 1) {
+            Console.Affichage("Saisie incorrecte, veuillez recommencer.");
+            Console.Entree(&intInput);
         }
     }
 
-    GMessage.Display();
+    GMessage.AffichageMessages();
 
     return 0;
 }

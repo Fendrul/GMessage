@@ -1,29 +1,21 @@
 #ifndef stdio
 #define stdio
 #include <cstdio>
+#include "GMessage.h"
+
 #endif
 
-#include "Message.h"
 
 #define OK 0
 #define FULL 1
 #define MESSAGETROPLONG 2
 
-#define nombreMots 3
 
-class GMessage {
+GMessage::GMessage() {
+    tailleGestionnaire = 0;
+}
 
-    Message message[nombreMots];
-    int index;
-    int iLectureIterative;
-    int tailleGestionnaire;
-    int RC;
-
-public:
-    GMessage();
-    void NouveauMessage(char *messageSaisi, int* returnCode);
-    void Display();
-};
-
-
-
+void GMessage::AjoutMessage(struct Message messageAInserer, int *returncode) {
+    Message[tailleGestionnaire] = messageAInserer;
+    tailleGestionnaire++;
+}

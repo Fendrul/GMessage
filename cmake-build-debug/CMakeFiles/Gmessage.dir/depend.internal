@@ -3,17 +3,18 @@
 
 CMakeFiles/Gmessage.dir/Console.cpp.obj
  C:/Users/simon/CLionProjects/Gmessage/Console.cpp
+ C:/Users/simon/CLionProjects/Gmessage/Console.h
 CMakeFiles/Gmessage.dir/GMessage.cpp.obj
- C:/Users/simon/CLionProjects/Gmessage/GMessage.cpp
- C:/Users/simon/CLionProjects/Gmessage/Message.cpp
- C:/Users/simon/CLionProjects/Gmessage/Message.h
-CMakeFiles/Gmessage.dir/Message.cpp.obj
- C:/Users/simon/CLionProjects/Gmessage/Message.cpp
-CMakeFiles/Gmessage.dir/main.cpp.obj
- C:/Users/simon/CLionProjects/Gmessage/Console.cpp
  C:/Users/simon/CLionProjects/Gmessage/Console.h
  C:/Users/simon/CLionProjects/Gmessage/GMessage.cpp
  C:/Users/simon/CLionProjects/Gmessage/GMessage.h
+ C:/Users/simon/CLionProjects/Gmessage/Message.h
+CMakeFiles/Gmessage.dir/Message.cpp.obj
+ C:/Users/simon/CLionProjects/Gmessage/Console.h
  C:/Users/simon/CLionProjects/Gmessage/Message.cpp
+ C:/Users/simon/CLionProjects/Gmessage/Message.h
+CMakeFiles/Gmessage.dir/main.cpp.obj
+ C:/Users/simon/CLionProjects/Gmessage/Console.h
+ C:/Users/simon/CLionProjects/Gmessage/GMessage.h
  C:/Users/simon/CLionProjects/Gmessage/Message.h
  C:/Users/simon/CLionProjects/Gmessage/main.cpp
