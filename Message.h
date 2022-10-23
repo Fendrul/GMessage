@@ -16,16 +16,22 @@
 #include "Console.h"
 #endif
 
-#define tailleMot 20
+#include <time.h>
+#include <cstring>
 
 class Message {
     char* message;
+    char* date;
     char typeMessage[10];
+    int debulLevel;
     Console Console;
 
 public:
-    void CreationMessage(char *messageSaisi, int *returnCode);
+    Message();
+    Message(char *messageInput, char *typeMessageInput, int debugLevelInput, int *returnCode);
     void Display();
+
+    Message(char string[100], char *string1, int i, int i1);
 
 private:
     int ComptageCaracteres(char *chaineCaracteres);

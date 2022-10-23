@@ -6,8 +6,22 @@ void Console::Affichage(char *texte) {
     fflush(stdout);
 }
 
-int Console::Entree(int *nombre) {
+void Console::Entree(int *nombre) {
     scanf("%d", nombre);
+}
+
+/**
+ * Effectue une saisie sur nombre et  préviens si celle-ci est à l'extérieur des bornes délimitées
+ * @return True si dans les bornes, false si en dehors
+ */
+bool Console::EntreeBornee(int *nombre, int borneInferieure, int borneSuperieure) {
+    scanf("%d", nombre);
+
+    if (*nombre % 1 != 0 || *nombre < borneInferieure || *nombre > borneSuperieure) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 void Console::Entree(char *texte) {

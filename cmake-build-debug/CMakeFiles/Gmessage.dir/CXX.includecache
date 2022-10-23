@@ -6,14 +6,12 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/simon/CLionProjects/Gmessage/Console.cpp
-Console.h
-C:/Users/simon/CLionProjects/Gmessage/Console.h
-
 C:/Users/simon/CLionProjects/Gmessage/Console.h
 cstdio
 -
 stdlib.h
+-
+cstring
 -
 
 C:/Users/simon/CLionProjects/Gmessage/GMessage.h
@@ -23,6 +21,8 @@ stdlib.h
 -
 Message.h
 C:/Users/simon/CLionProjects/Gmessage/Message.h
+cstring
+-
 
 C:/Users/simon/CLionProjects/Gmessage/Message.h
 cstdio
@@ -31,6 +31,10 @@ stdlib.h
 -
 Console.h
 C:/Users/simon/CLionProjects/Gmessage/Console.h
+time.h
+-
+cstring
+-
 
 C:/Users/simon/CLionProjects/Gmessage/main.cpp
 GMessage.h

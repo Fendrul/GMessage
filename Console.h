@@ -11,15 +11,19 @@
 #include <stdlib.h>
 #endif
 
+#include <cstring>
+
 
 class Console {
 
 public:
     void Affichage(char* texte);
 
-    int Entree(int *nombre);
+    void Entree(int *nombre);
 
     void Entree(char *texte);
+
+    bool EntreeBornee(int *nombre, int borneInferieure, int borneSuperieure);
 };
 
 #endif //GMESSAGE_CONSOLE_H

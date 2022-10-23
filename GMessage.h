@@ -12,6 +12,7 @@
 #endif
 
 #include "Message.h"
+#include <cstring>
 
 #define nombreMessages 10
 
