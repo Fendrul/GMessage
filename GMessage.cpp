@@ -26,3 +26,9 @@ void GMessage::AffichageMessages() {
         messageStocke[i].Display();
     }
 }
+
+void GMessage::AffichageMessagesDebug(int debugLevelRecherche) {
+    for (int i = 0; i < tailleGestionnaire; ++i) {
+        messageStocke[i].AffichageDebug(debugLevelRecherche);
+    }
+}

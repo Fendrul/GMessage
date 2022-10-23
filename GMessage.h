@@ -23,8 +23,12 @@ class GMessage {
 
 public:
     GMessage();
+
     void AjoutMessage (Message *messageAInserer, int* returnCode);
+
     void AffichageMessages();
+
+    void AffichageMessagesDebug(int debugLevelRecherche);
 };
 
 #endif //GMESSAGE_GMESSAGE_H

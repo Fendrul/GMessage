@@ -2,8 +2,17 @@
 
 
 void Console::Affichage(char *texte) {
-    printf("%s\n", texte);
+    printf("%s", texte);
     fflush(stdout);
+}
+
+void Console::Affichage(int nombre) {
+    printf("%d", nombre);
+    fflush(stdout);
+}
+
+void Console::RetourLigne() {
+    printf("\n\n");
 }
 
 void Console::Entree(int *nombre) {
@@ -25,6 +34,7 @@ bool Console::EntreeBornee(int *nombre, int borneInferieure, int borneSuperieure
 }
 
 void Console::Entree(char *texte) {
-    scanf("%c");
+    char buffer;
+    scanf("%c", &buffer);
     scanf("%[^\n]", texte);
 }

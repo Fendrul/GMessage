@@ -19,6 +19,10 @@ class Console {
 public:
     void Affichage(char* texte);
 
+    void Affichage(int nombre);
+
+    void RetourLigne();
+
     void Entree(int *nombre);
 
     void Entree(char *texte);

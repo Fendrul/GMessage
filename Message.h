@@ -19,22 +19,30 @@
 #include <time.h>
 #include <cstring>
 
+#define Warning 1
+#define Debug 2
+#define System 3
+
 class Message {
     char* message;
     char* date;
-    char typeMessage[10];
-    int debulLevel;
+    int messageType;
+    int debugLevel;
     Console Console;
 
 public:
     Message();
-    Message(char *messageInput, char *typeMessageInput, int debugLevelInput, int *returnCode);
+
+    Message(char *messageInput, int typeMessageInput, int debugLevelInput, int *returnCode);
+
     void Display();
 
-    Message(char string[100], char *string1, int i, int i1);
+    void AffichageDebug(int debugLevelRecherche);
 
 private:
     int ComptageCaracteres(char *chaineCaracteres);
+
+    char *MessageTypeIntToText(int debugLevel);
 };
 
 
