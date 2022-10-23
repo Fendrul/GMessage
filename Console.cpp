@@ -27,9 +27,9 @@ bool Console::EntreeBornee(int *nombre, int borneInferieure, int borneSuperieure
     scanf("%d", nombre);
 
     if (*nombre % 1 != 0 || *nombre < borneInferieure || *nombre > borneSuperieure) {
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 }
 
