@@ -32,4 +32,3 @@ public:
 };
 
 #endif //GMESSAGE_GMESSAGE_H
-

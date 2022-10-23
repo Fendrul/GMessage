@@ -7,7 +7,7 @@
 
 GMessage::GMessage() {
     tailleGestionnaire = 0;
-    messageStocke = (Message*)malloc(sizeof(Message) * 3);
+    messageStocke = (Message*)malloc(sizeof(Message) * nombreMessages);
 }
 
 void GMessage::AjoutMessage(Message *messageAInserer, int *returncode) {

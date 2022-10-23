@@ -50,7 +50,6 @@ int main() {
 //        Création du message avec les données récoltées et entrée de celui-ci dans le gestionnaire
         message = new Message(textInput, typeMessage, debugLevel, &returnCode);
         gestMessage.AjoutMessage(message, &returnCode);
-        gestMessage.AffichageMessages();
 
         Console.Affichage("Voulez-vous introduire un nouveau message ? \n1: Oui \n0: Non\n");
         while (!Console.EntreeBornee(&intInput, 0, 1)) {

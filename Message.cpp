@@ -1,7 +1,6 @@
 #include "Message.h"
 
-Message::Message() {
-}
+Message::Message() {}
 
 Message::Message(char *messageInput, int typeMessageInput, int debugLevelInput, int *returnCode) {
     time_t now = time(0);
@@ -38,34 +37,34 @@ void Message::AffichageDebug(int debugLevelRecherche) {
 }
 
 /**
- * Debug étant stocké en int, cette fct le converti en texte afin de pouvoir s'afficher sur la console
- * @param debugLevel
+ * intMessageType étant stocké en int, cette fct le converti en texte afin de pouvoir s'afficher sur la console
+ * @param intMessageType
  * @return la version texte du debug
  */
-char* Message::MessageTypeIntToText(int debugLevel) {
-    char* messageRetour;
+char* Message::MessageTypeIntToText(int intMessageType) {
+    char* charMessageType = NULL;
 
-    switch (debugLevel) {
+    switch (intMessageType) {
         case Warning:
-            messageRetour = "Warning";
+            charMessageType = "Warning";
             break;
 
         case Debug:
-            messageRetour = "Debug";
+            charMessageType = "Debug";
             break;
 
         case System:
-            messageRetour = "System";
+            charMessageType = "System";
             break;
     }
 
-    return messageRetour;
+    return charMessageType;
 }
 
 void Message::Display() {
     Console.Affichage(message);
 
-    Console.Affichage("\nDate du : ");
+    Console.Affichage("\nEn date du : ");
     Console.Affichage(date);
 
     Console.Affichage("Type de message : ");

@@ -42,7 +42,7 @@ public:
 private:
     int ComptageCaracteres(char *chaineCaracteres);
 
-    char *MessageTypeIntToText(int debugLevel);
+    char *MessageTypeIntToText(int intMessageType);
 };
 
 

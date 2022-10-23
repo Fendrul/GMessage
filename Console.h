@@ -25,9 +25,9 @@ public:
 
     void Entree(int *nombre);
 
-    void Entree(char *texte);
-
     bool EntreeBornee(int *nombre, int borneInferieure, int borneSuperieure);
+
+    void Entree(char *texte);
 };
 
 #endif //GMESSAGE_CONSOLE_H
